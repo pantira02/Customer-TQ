@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ThanQ - จองคิวแทนคุณ</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-blue-50 font-sans text-gray-800">
+  <!-- หัวเว็บ -->
+  <div class="bg-blue-600 text-white p-6 rounded-b-2xl shadow-md text-center">
+    <h1 class="text-2xl font-bold">ThanQ - ให้การรอคิวเป็นเรื่องง่ายด้วยระบบจองคิวแทนคุณ</h1>
+    <ul class="mt-3 text-sm space-y-1 text-left mx-auto max-w-xl">
+      <li>✅ มั่นใจทุกการจ้างจ่ายผ่านระบบการหักค่าธรรมเนียมอัตโนมัติ 25% ทุกงาน</li>
+      <li>✅ หากไม่มีคนรับงานคืนเงิน 100% ภายในวัน</li>
+      <li>✅ แชทผ่าน LINE OA ไม่ต้องโหลดแอป</li>
+      <li>✅ แต้มสะสม 1 งาน = 10 แต้ม / ครบ 3,000 แต้มรับส่วนลด 100 บาท</li>
+    </ul>
+  </div>
+
+  <!-- ฟอร์มจองงาน -->
+  <div class="max-w-xl mx-auto bg-white p-6 mt-6 rounded-xl shadow">
+    <h2 class="text-xl font-semibold mb-4 text-blue-600">✅ ฟีเจอร์จองงาน</h2>
+
+    <!-- อัปโหลดรูป -->
+    <label class="block mb-3">
+      📸 อัปโหลดรูปโปรไฟล์
+      <input type="file" accept="image/*" class="mt-1 block w-full border border-gray-300 p-2 rounded" />
+    </label>
+
+    <!-- ข้อมูลส่วนตัว -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+      <label>✍️ ชื่อ
+        <input type="text" class="mt-1 block w-full border border-gray-300 p-2 rounded" />
+      </label>
+      <label>📞 เบอร์โทร
+        <input type="tel" class="mt-1 block w-full border border-gray-300 p-2 rounded" />
+      </label>
+    </div>
+
+    <!-- รายละเอียดการจอง -->
+    <label class="block mt-4">
+      📌 เลือกบริการ
+      <select class="mt-1 block w-full border border-gray-300 p-2 rounded">
+        <option>รับหิ้วสินค้า</option>
+        <option>ต่อแถวจองคิว</option>
+        <option>จองที่แฟนคลับ</option>
+        <option>จองโต๊ะร้านเหล้า</option>
+        <option>นั่งชิลล์เป็นเพื่อน</option>
+      </select>
+    </label>
+
+    <label class="block mt-4">
+      🚦 ความเร่งด่วน
+      <select class="mt-1 block w-full border border-gray-300 p-2 rounded">
+        <option>ด่วนใน 1 ชั่วโมง</option>
+        <option>ไม่ด่วน (ภายในวัน)</option>
+      </select>
+    </label>
+
+    <div class="grid grid-cols-2 gap-4 mt-4">
+      <label>📅 วันที่-เวลา
+        <input type="datetime-local" class="mt-1 block w-full border border-gray-300 p-2 rounded" />
+      </label>
+      <label>💰 ค่าจ้าง (บาท)
+        <input type="number" class="mt-1 block w-full border border-gray-300 p-2 rounded" />
+      </label>
+    </div>
+
+    <div class="mt-2 text-sm text-green-600">📉 รายได้สุทธิ = ค่าจ้าง - 25% ค่าธรรมเนียม</div>
+
+    <label class="block mt-4">
+      📋 รายละเอียดเพิ่มเติม
+      <textarea rows="3" class="mt-1 block w-full border border-gray-300 p-2 rounded"></textarea>
+    </label>
+
+    <!-- แต้มสะสม -->
+    <div class="mt-4 text-sm text-purple-600">🪙 แต้มสะสม: ได้รับ 10 แต้ม/งาน</div>
+
+    <!-- ปุ่มแชทและส่ง -->
+    <div class="flex justify-between mt-6">
+      <a href="https://lin.ee/xxx" target="_blank" class="bg-green-500 text-white px-4 py-2 rounded shadow">💬 แชทผ่าน LINE</a>
+      <button class="bg-blue-600 text-white px-4 py-2 rounded shadow">📤 ส่งจองงาน</button>
+    </div>
+
+    <!-- สถานะงาน -->
+    <div class="mt-6 text-sm text-gray-600">
+      🔔 สถานะงาน: <span class="font-semibold text-yellow-500">รอคนรับ →</span> รับงาน → กำลังทำงาน → เสร็จสิ้น
+    </div>
+  </div>
+</body>
+</html>
